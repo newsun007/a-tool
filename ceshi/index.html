@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>自动生成图片小工具</title>
+    <style>
+        #download_new{
+            opacity: 1;
+        }
+        p{
+            font-family:Arial, Helvetica, sans-serif;
+            font-style: italic;
+            font-size: 26px;
+            font-weight: 500;
+        }
+        textarea{
+            width: 100%;
+        }
+        #box{
+            margin:10px auto;
+            text-align: center;
+        }
+        label{
+            color: #ff0000;
+            margin-right: 20px;
+        }
+        h1,h3{
+            text-align: center;
+        }
+        #getfile{
+            margin-bottom: 20px;
+        }
+        table {
+	    border-collapse: collapse;
+	}
+	th, td {
+	    border: solid 1px #6D6D6D;
+	    padding: 5px 10px;
+	}
+    </style>
+</head>
+<body >
+
+   
+    <h3>选择文件导入Excel生成图片</h3>
+    <input type="file" id="getfile"  />
+    <button id="success">步骤2:点击生成图片</button>
+    <button id="download_new">步骤3：一键下载图片</button>
+    <div id="antherbox">
+       
+    </div>
+   
+    <hr />
+
+    <h1>生成奖状使用说明:</h1>
+    <h3>1.批量输入姓名，名字之间用中文输入法'、' =====格式为:张三、李四、王五</h3>
+    <h3>2.输入需要生成图片的日子 =====格式为:2019-10-22</h3>
+    <h3>3.点击生成图片，生成对应的图片</h3>
+    <h3>4.点击一键下载，即可批量下载图片！</h3>
+    <span>请输入姓名:</span><textarea name="" id="name" cols="30" rows="10"></textarea>
+  
+   <label for="time" >请输入需要生成图片的日期:</label> <input type="text" placeholder="请输入日期" id="time">
+  
+    <button id="btn">生成奖状</button>
+    <button id="download">一键下载</button>
+    <div id="box"></div>
+
+<script src="./js/jquery-3.3.1.min.js"></script>
+<script src="./js/xlsx.full.min.js"></script>
+<script src="./js/action.js"></script>
+
+
+
+
+</body>
+</html>
